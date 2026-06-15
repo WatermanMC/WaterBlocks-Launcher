@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>WaterBlocks Launcher</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="icons/icon.png">
+</head>
+
+<body>
+    <img src="icons/logo.png" alt="Logo" style="height: 50px; width: auto;">
+    <div id="normal-ui">
+        <h1>WaterBlocks Launcher</h1>
+        <div>
+            <select id="version-select">
+                <option value="">Loading versions...</option>
+            </select>
+        </div>
+        <div style="margin-top: 20px;">
+            <button id="play-btn">PLAY</button>
+        </div>
+        <div id="status">Initializing...</div>
+    </div>
+
+    <!-- bsod -->
+    <div id="bsod">
+        <div class="bsod-content">
+            <div class="bsod-title">:[</div>
+            <div class="bsod-message">
+                Oh no! You don't have internet connection!<br>
+                We can't fetch new versions.<br>
+                Please try again later.
+            </div>
+            <div class="bsod-code">ERR_INTERNET_CONNECTION</div>
+            <button class="bsod-retry" id="bsod-retry-btn">Retry</button>
+        </div>
+    </div>
+
+    <script src="/js/neutralino.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
