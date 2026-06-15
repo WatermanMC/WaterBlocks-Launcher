@@ -80,4 +80,4 @@ This project is licensed under the GNU GPL v3, see the LICENSE file for details.
 ---
 
 **Enjoy WaterBlocks!**
-[Official website](https://waterblocks-game.pages.dev/) | [Game releases]9https://github.com/WatermanMC/WaterBlocks-Releases)
+[Official website](https://waterblocks-game.pages.dev/) | [Game releases](https://github.com/WatermanMC/WaterBlocks-Releases)
