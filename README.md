@@ -45,7 +45,7 @@ You need [Node.js](https://nodejs.org/) and [Neu](https://neutralino.js.org/docs
    `neu build --release`
 
 > **Note:** The launcher expects a remote `versions.json` file at https://waterblocks-game.pages.dev/versions.json.
-> See the [WaterBlocks-Releases](https://github.com/WatermnMC/WaterBlocks-Releases) repository for how to host your own game files and manifest.
+> See the [WaterBlocks-Releases](https://github.com/WatermanMC/WaterBlocks-Releases) repository for how to host your own game files and manifest.
 
 ---
 
