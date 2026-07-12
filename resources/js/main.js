@@ -268,9 +268,27 @@ async function downloadGame() {
     await downloadFileShell(gameDownloadUrl, getLocalGamePath());
 }
 
+// Linux doesn't preserve the executable bit through curl/wget downloads,
+// so make sure the binary is runnable before we try to launch it.
+async function makeExecutable(filePath) {
+    if (currentPlatform === 'windows') return;
+    try {
+        const result = await Neutralino.os.execCommand(`chmod +x "${filePath}"`);
+        if (result.exitCode !== 0) {
+            console.warn(`chmod +x exited ${result.exitCode} for ${filePath}`);
+        }
+    } catch (err) {
+        console.warn(`Could not chmod +x ${filePath}:`, err.message || err);
+    }
+}
+
 async function launchGame() {
     const localPath = getLocalGamePath();
     statusDiv.innerText = `Launching ${selectedVersion}...`;
+
+    // Make sure the binary is executable (covers both fresh downloads and
+    // pre-existing installs from before this launcher added this step).
+    await makeExecutable(localPath);
 
     // Hide the launcher window while the game runs
     try {
@@ -294,7 +312,7 @@ async function launchGame() {
         console.error('Error while running game:', err);
         try {
             await Neutralino.window.show();
-        } catch {}
+        } catch { }
         statusDiv.innerHTML = `Error: ${err.message}<br><button id="retry-btn">Retry</button>`;
         const retryBtn = document.getElementById('retry-btn');
         if (retryBtn) retryBtn.addEventListener('click', () => playBtn.click());
