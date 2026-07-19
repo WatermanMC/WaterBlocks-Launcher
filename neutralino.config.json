@@ -35,7 +35,7 @@
   "modes": {
     "window": {
       "title": "WaterBlocks Launcher",
-      "icon": "/resources/icons/icon.ico",
+      "icon": "/resources/icons/icon.png",
       "width": 1152,
       "height": 648,
       "minWidth": 1024,
