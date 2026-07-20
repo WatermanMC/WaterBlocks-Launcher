@@ -27,7 +27,7 @@ The launcher stores game files in `%USERPROFILE%/WaterBlocks-Launcher` (Windows)
 - **Cross‑platform** - works on Windows and Linux (x86_64 only).
 - **Local caching** - downloaded games remain usable offline.
 - **Version selection** - dropdown menu lets you pick any previously downloaded version.
-- **BSOD fallback** - if you are offline and have **no** local game files, a blue‑screen error appears instead of confusing buttons.
+- **BSOD style error** - if you are offline and have **no** local game files, a blue‑screen error appears instead of confusing buttons.
 - **Auto‑close** - the launcher hides while the game is running and exits completely when the game closes.
 
 ---
