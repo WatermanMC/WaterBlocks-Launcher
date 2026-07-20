@@ -60,7 +60,6 @@ You need [Node.js](https://nodejs.org/) and [Neu](https://neutralino.js.org/docs
 If you find a bug or have a feature request, please [open an issue](https://github.com/WatermanMC/WaterBlocks-Launcher/issues).
 Include:
 
-- The version of the launcher (or commit hash)
 - Steps to reproduce the problem
 - Any error messages from the launcher (enable inspector in `neutralino.config.json` to see the console)
 
